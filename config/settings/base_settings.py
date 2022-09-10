@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'apps.accounts.apps.AccountsConfig',
     'apps.stadium.apps.StadiumConfig',
     'apps.team.apps.TeamConfig',
+    'apps.match.apps.MatchConfig',
     # Third-Party Apps
     'rest_framework',
     'rest_framework_simplejwt',  # Need for localizations/translations
