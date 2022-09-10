@@ -1,3 +1,9 @@
 from django.contrib import admin
 
-# Register your models here.
+from apps.team.models import Team
+
+
+@admin.register(Team)
+class TeamAdmin(admin.ModelAdmin):
+
+    search_fields = ('name',)
