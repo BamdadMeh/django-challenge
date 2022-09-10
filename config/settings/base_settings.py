@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Local Apps
     'apps.accounts.apps.AccountsConfig',
+    'apps.stadium.apps.StadiumConfig',
     # Third-Party Apps
     'rest_framework',
     'rest_framework_simplejwt',  # Need for localizations/translations
