@@ -1,9 +1,17 @@
 from rest_framework.views import APIView, Response
+from rest_framework.permissions import AllowAny
 from rest_framework.status import (
     HTTP_201_CREATED,
     HTTP_400_BAD_REQUEST,
 )
 
+from rest_framework_simplejwt.authentication import JWTAuthentication
+from rest_framework_simplejwt.views import (
+
+    TokenObtainPairView,
+    TokenRefreshView,
+    TokenVerifyView,
+)
 
 from apps.accounts.serializers import UserSerializer
 from apps.accounts.permissions import IsAnonymous
@@ -28,3 +36,21 @@ class UserCreateAPIView(APIView):
             return Response(data=srz_data.data, status=HTTP_201_CREATED)
 
         return Response(data=srz_data.errors, status=HTTP_400_BAD_REQUEST)
+
+
+class UserLoginAPIView(TokenObtainPairView):
+
+    authentication_classes = (JWTAuthentication,)
+    permission_classes = (IsAnonymous,)
+
+
+class UserTokenRefreshView(TokenRefreshView):
+
+    authentication_classes = (JWTAuthentication,)
+    permission_classes = (AllowAny,)
+
+
+class UserTokenVerifyView(TokenVerifyView):
+
+    authentication_classes = (JWTAuthentication,)
+    permission_classes = (AllowAny,)
