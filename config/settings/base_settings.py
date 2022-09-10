@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Local Apps
     'apps.accounts.apps.AccountsConfig',
+    # Third-Party Apps
+    'rest_framework',
+    'rest_framework_simplejwt',  # Need for localizations/translations
 ]
 
 MIDDLEWARE = [
@@ -130,3 +133,21 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 ##################
 
 AUTH_USER_MODEL = 'accounts.User'
+
+##################
+# DRF #
+##################
+
+REST_FRAMEWORK = {
+
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+
+    'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework.renderers.JSONRenderer',
+    ),
+
+
+}
