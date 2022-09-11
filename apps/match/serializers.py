@@ -162,7 +162,7 @@ class ListUpdateMatchSeatInfoSerializer(Serializer):
 
     def __init__(self, *args, **kwargs):
 
-        self.match = kwargs.pop('match')
+        self.match = kwargs.pop('match', None)
         super().__init__(*args, **kwargs)
 
     def validate(self, data):
