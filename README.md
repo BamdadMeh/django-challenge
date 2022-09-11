@@ -52,6 +52,7 @@ Please fork this repository and add your code to that. Don't forget that your co
 - استفاده از مواردی از قبیل throttling, versioning صرف نظر شده است
 - CORS  پیاده سازی نشده است
 - فایل های مختلفی برای settings  در نظر گرفته شده برای حالات مختلف مثل dev, prod
+- برای محافظت از موارد مهم، مثل password ها یا SECRET_KEY و ... ، باید از متغیرهای محیطی یا پکیج python-decouple استفاده کرد که به دلیل سهولت استفاده از این پروژه، این مورد پیاده سازی نشده است.
 
 # 1 - App accounts
 
