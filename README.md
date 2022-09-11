@@ -28,6 +28,7 @@ Please fork this repository and add your code to that. Don't forget that your co
 - در همه اپ ها به طور کامل برای همه چیز تست نوشته شده است (urls, models, views, serializers) (حدود 2 هزار خط کد)
 - پروژه داکرایز شده است
 - برای همه view ها، permissions مناسب در نظر گرفته شده است
+- API documentation tools used
 
 # Note 
 
