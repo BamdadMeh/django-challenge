@@ -1,0 +1,4 @@
+﻿# Django #
+*.pyc
+__pycache__
+.idea/
