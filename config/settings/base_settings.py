@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     # Third-Party Apps
     'rest_framework',
     'rest_framework_simplejwt',  # Need for localizations/translations
+    'drf_spectacular',
 ]
 
 MIDDLEWARE = [
@@ -152,5 +153,18 @@ REST_FRAMEWORK = {
         'rest_framework.renderers.JSONRenderer',
     ),
 
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 
+}
+
+##################
+# DRF Spectacular -> This is for API Documentation
+##################
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'ArmanSolution Challenge',
+    'DESCRIPTION': 'This is API Documentation for ArmanSolution Task',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+    # OTHER SETTINGS
 }
